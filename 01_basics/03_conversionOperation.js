@@ -168,3 +168,160 @@ let someNumber = 42; //non-zero numbers are considered truthy in JavaScript
 let stringNumber = String(someNumber); //convert number to string
 console.log(stringNumber); // "42" (the number 42 is converted to the string "42")
 console.log(typeof stringNumber); //string (the type of the new variable is string)
+
+// ****************************************** Operations ******************************************
+
+// In JavaScript, we can perform various operations on different data types. 
+// For example, we can perform arithmetic operations on numbers, concatenate strings, and manipulate arrays and objects. 
+// Here are some examples of operations in JavaScript:
+
+// Arithmetic Operations:
+let a = 10;
+let b = 5;
+
+console.log(a + b); //15 (addition)
+console.log(a - b); //5 (subtraction)
+console.log(a * b); //50 (multiplication)
+console.log(a ** b); //100000 (exponentiation)
+console.log(a / b); //2 (division)
+console.log(a % b); //0 (modulus)
+
+// String Operations:
+let str1 = "Hello";
+let str2 = "World";
+
+console.log(str1 + " " + str2); // "Hello World" (string concatenation)
+console.log(str1.length); //5 (length of the string)
+console.log(str1.toUpperCase()); //"HELLO" (convert to uppercase)
+console.log(str1.toLowerCase()); //"hello" (convert to lowercase)
+console.log(str1.charAt(0)); // "H" (character at index 0)
+
+// Array Operations:
+let arr = [1, 2, 3, 4, 5];
+
+console.log(arr.length); //5 (length of the array)
+console.log(arr[0]); //1 (accessing the first element)
+arr.push(6); //add an element to the end of the array
+console.log(arr); //[1, 2, 3, 4, 5, 6] (array after adding an element)
+arr.pop(); //remove the last element from the array
+console.log(arr); //[1, 2, 3, 4, 5] (array after removing the last element)
+
+// Object Operations:
+let person = {
+    name: "John",
+    age: 30,
+    greet: function() {
+        console.log("Hello, my name is " + this.name);
+    }
+};
+
+console.log(person.name); // "John" (accessing a property)
+person.greet(); // "Hello, my name is John" (calling a method)
+person.age = 31; //updating a property
+console.log(person.age); //31 (updated age)
+
+// These examples demonstrate some of the basic operations that can be performed on different data types in JavaScript. 
+// Understanding how to manipulate and operate on data is essential for writing effective JavaScript code.  
+
+let value = 10
+let negValue = -value; //negation operator
+console.log(negValue); //-10 (the negation of 10 is -10)
+
+let isLoggedIn = true;
+let notLoggedIn = !isLoggedIn; //logical NOT operator
+console.log(notLoggedIn); //false (the logical NOT of true is false)
+
+let a = 5;
+let b = 10;
+let isAGreaterThanB = a > b; //greater than operator
+console.log(isAGreaterThanB); //false (5 is not greater than 10)
+
+let isALessThanB = a < b; //less than operator
+console.log(isALessThanB); //true (5 is less than 10)
+
+let isAEqualToB = a === b; //strict equality operator
+console.log(isAEqualToB); //false (5 is not strictly equal to 10)
+
+let isANotEqualToB = a !== b; //strict inequality operator
+console.log(isANotEqualToB); //true (5 is not strictly equal to 10)
+
+let isALessThanOrEqualToB = a <= b; //less than or equal to operator
+console.log(isALessThanOrEqualToB); //true (5 is less than or equal to 10)
+
+let isAGreaterThanOrEqualToB = a >= b; //greater than or equal to operator
+console.log(isAGreaterThanOrEqualToB); //false (5 is not greater than or equal to 10)
+
+// These examples demonstrate the use of various operators in JavaScript, including arithmetic, logical, and comparison operators. 
+// Understanding how to use these operators is crucial for performing operations and making decisions in your JavaScript code.
+
+console.log("1" + 2); // "12" (string concatenation, because "1" is a string)
+console.log(1 + "2"); // "12" (string concatenation, because "2" is a string)
+console.log("1" + 2 + 2); // "122" (string concatenation, because "1" is a string)
+console.log(1 + 2 + "2"); // "32" (string concatenation, because "2" is a string)   
+
+console.log("1" - 2); // -1 (subtraction, because "1" is converted to a number)
+console.log("1" * 2); // 2 (multiplication, because "1" is converted to a number)
+console.log("1" / 2); // 0.5 (division, because "1" is converted to a number)
+
+console.log(true); //true (boolean value)
+console.log(false); //false (boolean value)
+console.log(true + true); // 2 (true is converted to 1, so 1 + 1 = 2)
+console.log(true + false); // 1 (true is converted to 1 and false is converted to 0, so 1 + 0 = 1)
+console.log(false + false); // 0 (false is converted to 0, so 0 + 0 = 0)
+console.log(+true); // 1 (unary plus operator converts true to 1)
+console.log(+false); // 0 (unary plus operator converts false to 0)
+console.log(+""); // 0 (unary plus operator converts empty string to 0)
+
+// Assignment operators:
+let x = 10;
+x += 5; // equivalent to x = x + 5
+console.log(x); // 15 (x is now 15)
+
+x -= 3; // equivalent to x = x - 3
+console.log(x); // 12 (x is now 12)
+
+x *= 2; // equivalent to x = x * 2  
+console.log(x); // 24 (x is now 24) 
+
+x /= 4; // equivalent to x = x / 4
+console.log(x); // 6 (x is now 6)
+
+x %= 5; // equivalent to x = x % 5
+console.log(x); // 1 (x is now 1)
+
+let gameCounter = 100
+gameCounter++; //increment operator (equivalent to gameCounter = gameCounter + 1)
+console.log(gameCounter); //101 (gameCounter is now 101)
+++gameCounter; //increment operator (equivalent to gameCounter = gameCounter + 1)
+console.log(gameCounter); //102 (gameCounter is now 102)
+
+Pre-increment and post-increment operators:
+let a = 5;
+console.log(a++); // 5 (post-increment: returns the value before incrementing)
+console.log(a); // 6 (a is now 6)
+
+let b = 5;
+console.log(++b); // 6 (pre-increment: increments the value before returning it)
+console.log(b); // 6 (b is now 6)
+
+// The difference between pre-increment and post-increment is the order of evaluation. 
+// In post-increment, the original value is returned first, and then the variable is incremented. 
+// In pre-increment, the variable is incremented first, and then the new value is returned. 
+// This can lead to different results depending on how the increment operator is used in an expression.
+
+// Some examples of using pre-increment and post-increment in expressions:
+let x = 5;
+let y = x++ + 10;   
+console.log(x); // 6 (x is now 6)
+console.log(y); // 15 (y is 5 + 10, because x was post-incremented)
+
+let a = 5;
+let b = ++a + 10; 
+console.log(a); // 6 (a is now 6)
+console.log(b); // 16 (b is 6 + 10, because a was pre-incremented)
+
+// In the first example, `x++` returns the original value of `x` (which is 5) and then increments `x` to 6. 
+// In the second example, `++a` increments `a` to 6 first and then returns the new value of `a` (which is 6) to be added to 10. 
+// This illustrates how the order of evaluation differs between pre-increment and post-increment operators in JavaScript.   
+
+
