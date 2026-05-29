@@ -78,3 +78,44 @@ console.log(typeof myFunction); // "function"
 // In JavaScript, we can use the typeof operator to check the type of a variable or value. 
 // The typeof operator returns a string indicating the type of the operand.
 
+//***************************************Memory Management***************************************//
+// Stack and Heap are two different areas of memory used for different purposes in JavaScript:
+//Stack(Primitives): The stack is used for storing primitive values (such as numbers, strings, booleans, etc.) and function calls.
+//Heap(Non-Primitives): The heap is used for storing non-primitive values (such as objects, arrays, functions, etc.) and their references.
+
+// When we assign a primitive value to a variable, it is stored directly in the stack. 
+// When we assign a non-primitive value to a variable, a reference to that value is stored in the stack, while the actual value is stored in the heap. 
+// This is why when we compare two non-primitive values (like objects or arrays), we are comparing their references in the stack, not their actual contents in the heap.
+
+let myFavoriteCartoon = "Tom and Jerry"; // myFavoriteCartoon is stored in the stack as a primitive value
+let anotherFavoriteCartoon = myFavoriteCartoon; // anotherFavoriteCartoon is also stored in the stack as a primitive value, and it is a copy of myFavoriteCartoon
+anotherFavoriteCartoon = "SpongeBob SquarePants"; // anotherFavoriteCartoon is now a different value in the stack, and it does not affect myFavoriteCartoon
+
+console.log(myFavoriteCartoon); // "Tom and Jerry"
+console.log(anotherFavoriteCartoon); // "SpongeBob SquarePants"
+
+// In this example, we can see that myFavoriteCartoon and anotherFavoriteCartoon are stored in the stack as primitive values. 
+// When we assign myFavoriteCartoon to anotherFavoriteCartoon, we are creating a copy of the value in the stack. 
+// Changing anotherFavoriteCartoon does not affect myFavoriteCartoon because they are stored as separate values in the stack.
+
+let myFavoriteMovie = { title: "Inception", director: "Christopher Nolan" }; // myFavoriteMovie is stored in the heap as a non-primitive value, and a reference to it is stored in the stack
+let anotherFavoriteMovie = myFavoriteMovie; // anotherFavoriteMovie is also stored in the stack as a reference to the same non-primitive value in the heap
+anotherFavoriteMovie.title = "The Matrix"; // we are modifying the non-primitive value in the heap through the reference anotherFavoriteMovie
+
+console.log(myFavoriteMovie); // { title: "The Matrix", director: "Christopher Nolan" }
+console.log(anotherFavoriteMovie); // { title: "The Matrix", director: "Christopher Nolan" }
+
+// In this example, we can see that myFavoriteMovie and anotherFavoriteMovie are stored in the stack as references to the same non-primitive value in the heap. 
+// When we modify anotherFavoriteMovie, we are actually modifying the same object in the heap that myFavoriteMovie references. 
+// This is why both myFavoriteMovie and anotherFavoriteMovie reflect the change, demonstrating that they are referencing the same non-primitive value in the heap.
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@okaxis"
+}
+
+let userTwo = userOne; // userTwo is a reference to the same object in the heap that userOne references
+userTwo.email = "divya@google.com"; // we are modifying the non-primitive value in the heap through the reference userTwo
+
+console.log(userOne.email); // "divya@google.com"
+console.log(userTwo.email); // "divya@google.com"
