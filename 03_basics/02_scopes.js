@@ -37,3 +37,42 @@ testFunction();
 
 // The scope through browser console is different than the node console because in the browser console, variables declared with 'var' are added to the global scope (window object), while in Node.js, they are not added to the global scope. 
 // This means that in the browser console, you can access variables declared with 'var' from anywhere, while in Node.js, you cannot access them outside of their respective scopes.
+
+function one() {
+    const username = "Divya";
+
+    function two() {
+        const website = "divya.com";
+        console.log(username);
+    }
+    //console.log(website); 
+
+    two()
+}
+
+one()
+
+if (true) {
+    const username = "Divya"
+    if (username === "Divya") {
+        const website = " youtube.com"
+        console.log(username + website); // This will print "Divya youtube.com" to the console because the variable 'username' is declared with 'const' inside the first if block, and the variable 'website' is declared with 'const' inside the nested if block, so both variables are accessible within their respective blocks and can be used together to concatenate the string and print it to the console
+    }
+    //console.log(website); // This will throw a ReferenceError because the variable 'website' is declared with 'const' inside the nested if block, which gives it block scope, so it is not accessible outside of that block, including the outer if block where it is being accessed
+}
+//console.log(username); // This will throw a ReferenceError because the variable 'username' is declared with 'const' inside the first if block, which gives it block scope, so it is not accessible outside of that block, including the global scope where it is being accessed
+
+// +++++++++++++++++++++++++++++++++++++++++ Interesting ++++++++++++++++++++++++++++++++++++++++++++++++
+//Function Declaration
+console.log(addone(5));
+function addone(num) { //it is declared as a function declaration, so it is hoisted to the top of its scope, allowing it to be called before its actual declaration in the code
+    return num + 1;
+}
+//console.log(addone(5));
+
+//Function Expression and Hoisting
+console.log(addTwo(5));
+const addTwo = function(num) { //it is declared as a function expression, so it is not hoisted to the top of its scope, meaning that it cannot be called before its actual declaration in the code, which will result in a ReferenceError if you try to call it before it is defined
+    return num + 2;
+}
+// console.log(addTwo(5));
