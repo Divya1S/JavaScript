@@ -62,4 +62,63 @@ function loginUserMessage3(username = "Divya") { // This will set a default valu
 console.log(loginUserMessage3()); // This will print "Divya just logged in" to the console because the function has a default value of "Divya" for the username parameter, so when no argument is passed, it will use the default value
 console.log(loginUserMessage3("Alice")); // This will print "Alice just logged in" to the console because the function is using the value of the username parameter that is passed as an argument, which is "Alice" in this case, instead of the default value of "Divya"   
 
+//Rest operator
+function sumAllNumbers(...numbers) { // This will use the rest operator to collect all the arguments passed to the function into an array called 'numbers'
+    let total = 0;
+    for(let number of numbers){ // This will iterate over each number in the 'numbers' array and add it to the total variable
+        total += number;
+    }
+    return total; // This will return the total sum of all the numbers passed as arguments to the function
+}
+
+console.log(sumAllNumbers(1, 2, 3)); // This will print 6 to the console because the function will sum all the numbers passed as arguments (1 + 2 + 3) and return the result
+console.log(sumAllNumbers(4, 5)); // This will print 9 to the console because the function will sum all the numbers passed as arguments (4 + 5) and return the result
+console.log(sumAllNumbers(10)); // This will print 10 to the console because the function will sum all the numbers passed as arguments (10) and return the result
+console.log(sumAllNumbers()); // This will print 0 to the console because the function will sum all the numbers passed as arguments (none) and return the result, which is 0 since there are no numbers to add
+
+function calculateCartPrice(...prices) { // This will use the rest operator to collect all the arguments passed to the function into an array called 'prices'
+    return prices // This will return the 'prices' array, which contains all the arguments passed to the function, instead of calculating the total price of the cart
+}
+
+console.log(calculateCartPrice(10, 20, 30)); // This will print [10, 20, 30] to the console because the function is returning the 'prices' array, which contains all the arguments passed to the function
+
+//Interview question: What values will go in num1
+function calculateCartPrice2(val1, val2, ...num1) {
+    return num1; 
+} 
+console.log(calculateCartPrice2(200, 400, 500, 2000)) // This will print [500, 2000] to the console because the first two arguments (200 and 400) will be assigned to val1 and val2 respectively, and the rest of the arguments (500 and 2000) will be collected into the num1 array using the rest operator, which is then returned by the function
+console.log(calculateCartPrice2(10, 20, 30, 40, 50, 60)) // This will print [30, 40, 50, 60] to the console because the first two arguments (10 and 20) will be assigned to val1 and val2 respectively, and the rest of the arguments (30, 40, 50, and 60) will be collected into the num1 array using the rest operator, which is then returned by the function
+console.log(calculateCartPrice2(1, 2)) // This will print [] to the console because the first two arguments (1 and 2) will be assigned to val1 and val2 respectively, and since there are no additional arguments, the num1 array will be empty, which is then returned by the function
+
+//Objects
+const user = {
+    name: "Divya",
+    age: 25,
+    email: "dira@gmail.com"
+}
+
+function handleObject(anyobject) {
+    console.log(`Username is ${anyobject.name} and email is ${anyobject.email}`); // This will use template literals to insert the values of the 'name' and 'email' properties of the 'anyobject' parameter into the string and print it to the console
+}
+
+handleObject(user);  // This will print "Username is Divya and email is dira@gmail.com" to the console
+handleObject({
+    name: "Alice",
+    email: "alice@gmail.com"
+})
+
+
+//Arrays
+const numbers = [1, 2, 3, 4, 5];
+
+function returnSecondValue(arr) {
+    return arr[1]; // This will return the second element of the array passed as an argument to the function, which is at index 1 (since array indices start at 0)
+}
+
+console.log(returnSecondValue(numbers)); // This will print 2 to the console because the second element of the 'numbers' array is 2
+console.log(returnSecondValue([10, 20, 30, 40])); // This will print 20 to the console because the second element of the array [10, 20, 30, 40] is 20
+console.log(returnSecondValue(["a", "b", "c"])); // This will print "b" to the console because the second element of the array ["a", "b", "c"] is "b"
+
+
+
 
