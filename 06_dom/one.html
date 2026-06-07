@@ -15,11 +15,201 @@
 </head>
 <body class="bg-black">
     <div>
-        <h1 id="title" class="heading">DOM Learning on Github</h1>
+        <h1 style="color: blue" id="title" class="heading">DOM Learning on Github <span style = "display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
         <p>Let's study everything about DOM. DOM is the Document Object Model.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class = "list-item">one</li>
+            <li class = "list-item">two</li>
+            <li class = "list-item">three</li>
+            <li class = "list-item">four</li>
+        </ul>
     </div>
 </body>
 </html>
 
 <!-- https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model -->
 
+<!-- document.getElementById('title')
+<h1 id=​"title" class=​"test heading">​DOM Learning on Github​</h1>​
+document.getElementById('title').id
+'title'
+document.getElementById('title').id.class
+undefined
+document.getElementById('title').class
+undefined
+document.getElementById('title').className
+'heading'
+document.getElementById('title').getAttribute
+ƒ getAttribute() { [native code] }
+document.getElementById('title').getAttribute(id)
+VM353:1 Uncaught ReferenceError: id is not defined
+    at <anonymous>:1:47
+(anonymous) @ VM353:1Understand this error
+document.getElementById('title').getAttribute('id')
+'title'
+document.getElementById('title').getAttribute('class')
+'heading'
+document.getElementById('title').getAttribute('className')
+null
+document.getElementById('title').setAttribute('class', 'test')
+undefined
+document.getElementById('title').setAttribute('class', 'test heading')
+undefined
+document.getElementById('title')
+<h1 id=​"title" class=​"test heading">​DOM Learning on Github​</h1>​
+const title = document.getElementById('title') -->
+
+<!-- title.style.backgroundColor
+''
+title.style.backgroundColor = "green"
+'green'
+title.style.padding = "15px"
+'15px'
+title.style.padding = "25px"
+'25px'
+title.style.borderRadius = "25px"
+'25px' -->
+
+<!-- title.style.backgroundColor
+''
+title.style.backgroundColor = "green"
+'green'
+title.style.padding = "15px"
+'15px'
+title.style.padding = "25px"
+'25px'
+title.style.borderRadius = "25px"
+'25px' -->
+
+<!-- //Very Important  -->
+<!-- title.innerText
+'DOM Learning on Github'
+title.textContent
+'DOM Learning on Github test text'
+title.innerHTML
+'DOM Learning on Github <span style="display: none;">test text</span>'
+﻿ -->
+
+<!-- document.querySelector('input[type = "password"]')
+<input type=​"password" name id>​
+document.querySelector('p:first-child') -->
+
+<!-- document.querySelector('ul')
+<ul>​…​</ul>​<li style=​"background-color:​ green;​ padding:​ 10px;​">​::marker​"one"</li>​<li>​::marker​"two"</li>​<li>​::marker​"three"</li>​</ul>​
+const myul = document.querySelector('ul')
+undefined
+myul.querySelector('li')
+<li style=​"background-color:​ green;​ padding:​ 10px;​">​…​</li>​::marker​"one"</li>​
+const turnGreen = myul.querySelector('li')
+undefined
+turnGreen.style.backgroundColor = "green"
+'green'
+turnGreen.style.padding = "10px"
+'10px'
+turnGreen.innerText
+'one'
+turnGreen.innerText = "five"
+'five' -->
+
+<!-- document.querySelectorAll('li')
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeList
+const tempLiList = document.querySelectorAll('li')
+undefined
+tempLiList
+NodeList(3) [li, li, li]
+const myArr = [1, 2, 3, 4]
+undefined
+myArr
+(4) [1, 2, 3, 4]0: 11: 22: 33: 4length: 4[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+tempLiList.style.color = 'green'
+VM918:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:24 -->
+
+<!-- const tempLiList = document.querySelectorAll('li')
+undefined
+tempLiList
+NodeList(3) [li, li, li]
+tempLiList.style.color = 'green'
+VM963:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:24
+(anonymous) @ VM963:1Understand this error
+tempLiList[0].style.color = 'green'
+'green'
+tempLiList[0].style.color = 'yellow'
+'yellow' -->
+
+<!-- const myH1 = document.querySelectorAll('h1')
+undefined
+myH1
+NodeList [h1#title.heading]
+myH1.style.color = "green"
+VM1187:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:18
+(anonymous) @ VM1187:1Understand this error
+myH1[0].style.color = "green"
+'green'
+tempLiList.forEach(function (l) { 
+    l.style.backgroundColor = 'green'
+})    
+VM1369:1 Uncaught ReferenceError: tempLiList is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1369:1Understand this error
+const tempLiList = document.querySelectorAll('li')
+undefined
+tempLiList.forEach(function (l) { 
+    l.style.backgroundColor = 'green'
+})     -->
+
+<!-- document.getElementsByClassName('')
+HTMLCollection []
+document.getElementsByClassName('list-item')
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const tempClassList = document.getElementsByClassName('list-item')
+undefined
+tempClassList
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+tempClassList.forEach(function(li) {
+    console.log(li)
+} )
+VM1787:1 Uncaught TypeError: tempClassList.forEach is not a function
+    at <anonymous>:1:15
+(anonymous) @ VM1787:1Understand this error
+Array.from(tempClassList)
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const myConvertedArray = Array.from(tempClassList)
+undefined
+myConvertedArray
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+myConvertedArray.forEach(function(li){
+    li.style.color = 'orange'
+}) -->
+
+<!-- document.querySelectorAll('h2')
+NodeList(15) [h2.vector-pinnable-header-label, h2#History, h2#Trademark, h2#Website_client-side_usage, h2#Other_usage, h2#Execution, h2#Features, h2#Syntax, h2#Security, h2#Development_tools, h2#Related_technologies, h2#Notes, h2#References, h2#Further_reading, h2#External_links]0: h2.vector-pinnable-header-label1: h2#History2: h2#Trademark3: h2#Website_client-side_usage4: h2#Other_usage5: h2#Execution6: h2#Features7: h2#Syntax8: h2#Security9: h2#Development_tools10: h2#Related_technologies11: h2#Notes12: h2#References13: h2#Further_reading14: h2#External_linkslength: 15[[Prototype]]: NodeList
+const allH2 = document.querySelectorAll('h2')
+undefined
+allH2.innerText
+undefined
+allH2[0].innerText
+''
+allH2[1].innerText
+'History'
+allH2[2].innerText
+'Trademark' -->
+
+<!-- const myH2 = document.querySelectorAll(".mw-body")
+myH2
+myH2[0].innerText
+myH2.forEach(function(h){
+    h.style.color = 'red'
+})
+myH2.forEach(function(h){
+    h.style.color = 'red';
+    h.style.backgroundColor = 'green';
+    h.style.padding = '10px'
+}) -->
