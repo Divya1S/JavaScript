@@ -1,5 +1,5 @@
 // ProjectLink:
-https://stackblitz.com/edit/dom-project-chaiaurcode?file=2-BMICalculator%2Findex.html,2-BMICalculator%2Fchaiaurcode.js
+// https://stackblitz.com/edit/dom-project-chaiaurcode?file=2-BMICalculator%2Findex.html,2-BMICalculator%2Fchaiaurcode.js
 
 // Solution:
 const form = document.querySelector('form');
