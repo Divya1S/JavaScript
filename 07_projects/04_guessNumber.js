@@ -27,3 +27,11 @@ function displayGuess(guest){
 function displayMessage(message){
 
 }
+
+function newGame(){
+
+}
+
+function endGame(){
+
+}
