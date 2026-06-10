@@ -1,0 +1,41 @@
+<!-- This code is a classic demonstration of Asynchronous JavaScript Timers. Specifically, it shows how to schedule a future action using setTimeout and how to cancel that scheduled action before it fires using clearTimeout.
+
+Here is the theory, breakdown, and behavior explanation for this exact code.
+
+The Core Theory: Asynchronous Execution
+Normally, JavaScript runs code line-by-line from top to bottom (synchronously). However, some operations take time—like waiting for a user action or waiting for a timer to count down.
+
+To prevent the entire webpage from freezing while waiting, JavaScript uses Web APIs to handle timers asynchronously in the background.
+
+setTimeout() registers a task to run after a specific delay. It returns a unique Timeout ID (like a claim ticket).
+
+clearTimeout() takes that unique ID and cancels the scheduled task before it ever gets a chance to run. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript practice on Github</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayDivya = function(){
+        console.log("Divya");
+    }
+
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "Moving to advance Javascript practice on Github"
+    }
+
+    const changeMe = setTimeout(changeText, 5000) //Give reference of function changeText
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+</script>
+</html>
