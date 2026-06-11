@@ -14,18 +14,39 @@
 4	DONE	The operation is complete.
 </body>
 <script>
-    const requestUrl = 'https://randomuser.me/api/'
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function() {
-        console.log(xhr.readyState);
-        if (xhr.readyState == 4) {
-            const data = JSON.parse(this.responseText)
-            console.log(typeof data);
-            console.log(data);
-            console.log(data.email);
-        }
+    // const requestUrl = 'https://randomuser.me/api/'
+    // const xhr = new XMLHttpRequest();
+    // xhr.open('GET', requestUrl)
+    // xhr.onreadystatechange = function() {
+    //     console.log(xhr.readyState);
+    //     if (xhr.readyState == 4) {
+    //         const data = JSON.parse(this.responseText)
+    //         console.log(typeof data);
+    //         console.log(data);
+    //         console.log(data.email);
+    //     }
+    // }
+    // xhr.send();
+
+    const requestUrl = 'https://randomuser.me/api/';
+
+// Using modern Fetch with Async/Await
+async function getRandomUser() {
+    try {
+        const response = await fetch(requestUrl);
+        const data = await response.json();
+        
+        // Digging into the results array
+        const user = data.results[0]; 
+        
+        console.log(`${user.name.first} ${user.name.last}`);
+        console.log(user.email);
+        
+    } catch (error) {
+        console.error("Oops, something went wrong:", error);
     }
-    xhr.send();
+}
+
+getRandomUser();
 </script>
 </html>
