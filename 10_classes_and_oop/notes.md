@@ -858,3 +858,5 @@ Abstraction
 Encapsulation
 Inheritance
 Polymorphism
+
+This are the four pillars of JS
