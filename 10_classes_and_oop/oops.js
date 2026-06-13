@@ -120,7 +120,7 @@ function JusticeLeaguer(name) {
 const ironMan = new Avenger("Tony Stark");
 const batman = new JusticeLeaguer("Bruce Wayne");
 
-// 🚨 THE SECURITY SCANNER (Using instanceof)
+// THE SECURITY SCANNER (Using instanceof)
 
 // Is Iron Man allowed in the Avengers HQ?
 console.log(ironMan instanceof Avenger);        // Output: true ✅ (Access Granted)
