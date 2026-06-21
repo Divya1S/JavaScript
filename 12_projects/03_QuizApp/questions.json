@@ -1,0 +1,145 @@
+[
+    {
+        "category": "Science",
+        "difficulty": "Easy",
+        "question": "Which is the largest animal in the world?",
+        "answers": [
+            { "text": "Shark", "correct": false },
+            { "text": "Blue Whale", "correct": true },
+            { "text": "Elephant", "correct": false },
+            { "text": "Giraffe", "correct": false }
+        ]
+    },
+    {
+        "category": "Science",
+        "difficulty": "Easy",
+        "question": "Which planet is known as the Red Planet?",
+        "answers": [
+            { "text": "Venus", "correct": false },
+            { "text": "Mars", "correct": true },
+            { "text": "Jupiter", "correct": false },
+            { "text": "Saturn", "correct": false }
+        ]
+    },
+    {
+        "category": "Science",
+        "difficulty": "Medium",
+        "question": "What is the hardest natural substance on Earth?",
+        "answers": [
+            { "text": "Gold", "correct": false },
+            { "text": "Iron", "correct": false },
+            { "text": "Diamond", "correct": true },
+            { "text": "Platinum", "correct": false }
+        ]
+    },
+    {
+        "category": "Science",
+        "difficulty": "Hard",
+        "question": "What is the chemical symbol for tungsten?",
+        "answers": [
+            { "text": "Tu", "correct": false },
+            { "text": "W", "correct": true },
+            { "text": "Tn", "correct": false },
+            { "text": "Tg", "correct": false }
+        ]
+    },
+    {
+        "category": "Geography",
+        "difficulty": "Easy",
+        "question": "What is the capital of Australia?",
+        "answers": [
+            { "text": "Sydney", "correct": false },
+            { "text": "Melbourne", "correct": false },
+            { "text": "Canberra", "correct": true },
+            { "text": "Brisbane", "correct": false }
+        ]
+    },
+    {
+        "category": "Geography",
+        "difficulty": "Medium",
+        "question": "Which is the longest river in the world?",
+        "answers": [
+            { "text": "Amazon", "correct": false },
+            { "text": "Nile", "correct": true },
+            { "text": "Yangtze", "correct": false },
+            { "text": "Mississippi", "correct": false }
+        ]
+    },
+    {
+        "category": "Geography",
+        "difficulty": "Hard",
+        "question": "Which country has the most natural lakes?",
+        "answers": [
+            { "text": "Russia", "correct": false },
+            { "text": "United States", "correct": false },
+            { "text": "Canada", "correct": true },
+            { "text": "Finland", "correct": false }
+        ]
+    },
+    {
+        "category": "Art",
+        "difficulty": "Easy",
+        "question": "Who painted the Mona Lisa?",
+        "answers": [
+            { "text": "Vincent van Gogh", "correct": false },
+            { "text": "Pablo Picasso", "correct": false },
+            { "text": "Leonardo da Vinci", "correct": true },
+            { "text": "Michelangelo", "correct": false }
+        ]
+    },
+    {
+        "category": "Art",
+        "difficulty": "Medium",
+        "question": "Which art movement was Salvador Dalí associated with?",
+        "answers": [
+            { "text": "Cubism", "correct": false },
+            { "text": "Surrealism", "correct": true },
+            { "text": "Impressionism", "correct": false },
+            { "text": "Baroque", "correct": false }
+        ]
+    },
+    {
+        "category": "Art",
+        "difficulty": "Hard",
+        "question": "Which sculptor created the statue 'David'?",
+        "answers": [
+            { "text": "Donatello", "correct": false },
+            { "text": "Michelangelo", "correct": true },
+            { "text": "Bernini", "correct": false },
+            { "text": "Rodin", "correct": false }
+        ]
+    },
+    {
+        "category": "History",
+        "difficulty": "Easy",
+        "question": "In which year did World War II end?",
+        "answers": [
+            { "text": "1943", "correct": false },
+            { "text": "1945", "correct": true },
+            { "text": "1947", "correct": false },
+            { "text": "1950", "correct": false }
+        ]
+    },
+    {
+        "category": "History",
+        "difficulty": "Medium",
+        "question": "Who was the first President of the United States?",
+        "answers": [
+            { "text": "Thomas Jefferson", "correct": false },
+            { "text": "George Washington", "correct": true },
+            { "text": "John Adams", "correct": false },
+            { "text": "Abraham Lincoln", "correct": false }
+        ]
+    },
+    {
+        "category": "History",
+        "difficulty": "Hard",
+        "question": "The ancient city of Carthage was located in which modern country?",
+        "answers": [
+            { "text": "Egypt", "correct": false },
+            { "text": "Tunisia", "correct": true },
+            { "text": "Greece", "correct": false },
+            { "text": "Italy", "correct": false }
+        ]
+    }
+]

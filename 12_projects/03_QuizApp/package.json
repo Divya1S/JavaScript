@@ -1,0 +1,9 @@
+{
+    "name": "quiz-app",
+    "version": "1.0.0",
+    "description": "A small vanilla-JS quiz with categories, a timer, and a review screen.",
+    "type": "module",
+    "scripts": {
+        "test": "node --test"
+    }
+}
