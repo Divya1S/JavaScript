@@ -8,18 +8,41 @@
 </head>
 <body>
 <div class="app">
-    <h1>Simple Quiz</h1>
-    <div class="quiz">
-        <h2 id="question">Question goes here</h2>
-        <div id="answer-buttons">
-            <button class="btn">Answer 1</button>
-            <button class="btn">Answer 2</button>
-            <button class="btn">Answer 3</button>
-            <button class="btn">Answer 4</button>
+    <div class="topbar">
+        <h1>Simple Quiz</h1>
+        <span id="high-score" class="high-score"></span>
+    </div>
+    <div id="start-screen" class="start-screen">
+        <label class="field" for="category-select">
+            <span class="field-label">Category</span>
+            <select id="category-select"></select>
+        </label>
+        <div class="field">
+            <span class="field-label">Difficulty</span>
+            <div id="difficulty-options" class="difficulty-options">
+                <button type="button" class="diff-btn" data-difficulty="All">All</button>
+                <button type="button" class="diff-btn" data-difficulty="Easy">Easy</button>
+                <button type="button" class="diff-btn" data-difficulty="Medium">Medium</button>
+                <button type="button" class="diff-btn" data-difficulty="Hard">Hard</button>
+            </div>
         </div>
+        <p id="start-count" class="start-count"></p>
+        <button id="start-btn" class="primary-btn">Start Quiz</button>
+    </div>
+
+    <div id="quiz-screen" class="quiz" hidden>
+        <div class="quiz-head">
+            <div id="progress" class="progress"></div>
+            <div id="timer" class="timer"></div>
+        </div>
+        <h2 id="question">Question goes here</h2>
+        <div id="answer-buttons"></div>
         <button id="next-btn">Next</button>
+        <button id="change-btn" class="ghost-btn">Change category</button>
+        <div id="review" class="review"></div>
+        <p class="hint">Tip: press <kbd>1</kbd>–<kbd>4</kbd> to answer, <kbd>Enter</kbd> for next.</p>
     </div>
 </div>
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
 </body>
 </html>
