@@ -1,7 +1,7 @@
 const accountId = 111234
 let accountEmail = "divya@google.com"
 var accountPassword = "1234"
-accountCity = "Los Angeles" //This should be used but a variable can be declared in this way as well
+accountCity = "Los Angeles" //This should not be used but a variable can be declared in this way as well
 let accountState;
 
 //accountId = 21 //not allowed 
